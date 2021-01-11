@@ -1,18 +1,23 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { useContext , useState} from "react";
-import { imageContext } from "../../AppRouter";
+import { useState} from "react";
+// import { imageContext } from "../../AppRouter";
 import Heading from "../atoms/Heading";
 import Form from "../Organism/Form/Form";
+import { connect } from "react-redux";
+import { removeAction } from "../../Redux/Image/imageActions";
 
-export default function Remove() {
+function Remove(props) {
 
-    const { setImage } = useContext(imageContext)
+    // const { setImage } = useContext(imageContext)
 
     const [name, setName] = useState('');
     const {isAuthenticated} = useAuth0();
 
     function handleOnSubmit(e) {
-        setImage({type: 'remove', name:name})
+        // setImage({type: 'remove', name:name})
+        const imageName = name
+        props.removeAction(imageName);
+        setName('');
     }
 
     return (
@@ -30,3 +35,20 @@ export default function Remove() {
         )
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        images: state.images
+    }
+} 
+
+const mapDispatchToProps = dispatch =>{
+    return {
+        removeAction: (data) => dispatch(removeAction(data))
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Remove)
