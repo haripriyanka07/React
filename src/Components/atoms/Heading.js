@@ -5,6 +5,6 @@ export default function Heading(props) {
 }
 export function Hseading(props) {
     return (
-        <h1>{props.value}</h1>
+        <h2>{props.value}</h2>
     )
 }
