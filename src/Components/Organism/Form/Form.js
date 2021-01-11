@@ -16,7 +16,7 @@ export default function Form(props){
     }
 
     return (
-        <form className="form" onSubmit={handleChange}>
+        <form id="newform" className="form" onSubmit={handleChange}>
             {props.data.map(val => 
                 <div key={val.label}>
                     <Label value={val.label}/>

@@ -1,20 +1,36 @@
-import React, {useContext, useState} from "react";
-import { imageContext } from "../../AppRouter";
+import React, {useState} from "react";
+// import { imageContext } from "../../AppRouter";
 import Heading from "../atoms/Heading";
 import Form from "../Organism/Form/Form";
 import { useAuth0 } from "@auth0/auth0-react";
+import { connect } from 'react-redux';
+import { addAction } from "../../Redux/Image/imageActions";
 
-export default function Add() {
+function Add(props) {
 
     const [url, setUrl] = useState('');
     const [name, setName] = useState('');
     const [info, setInfo] = useState('');
     const [date, setDate] = useState('');
     const {isAuthenticated} = useAuth0();
-    const { setImage } = useContext(imageContext)
+    // const { setImage } = useContext(imageContext)
     
+    console.log(props);
+
     function handleOnSubmit(e) {
-        setImage({type: 'add', data: {"name":name, "url":url, "info":info, "date":date}})
+        // setImage({type: 'add', data: {"name":name, "url":url, "info":info, "date":date}})
+        const data = {
+            name,
+            url,
+            info,
+            date
+        }
+        props.addAction(data);
+        setName('');setDate('');setInfo('');setUrl('');
+        // setUrl = '';
+        // setInfo = '';
+        // setDate = '';
+
     }
 
     return (
@@ -37,3 +53,24 @@ export default function Add() {
         )
     )
 }
+
+const mapStateToProps = states => {
+    // console.log("states", states);
+    return {
+        images: states.images
+        // addAction: (data) => state(addAction(data)),
+        // removeAction: (data) => state(removeAction(data))
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    // console.log("dispatch", test)
+    return {
+        addAction: (data) => dispatch(addAction(data))
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Add)
