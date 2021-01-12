@@ -4,7 +4,7 @@ export const initialState = {
     contacts: []
 }
 
-const contactReducer = (state = initialState, action) => {
+export const contactReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_CONTACT:
             return {...state, contacts: [...state.contacts, action.data]};
@@ -12,4 +12,4 @@ const contactReducer = (state = initialState, action) => {
             return state;
     }
 }
-export default contactReducer;
+// export default contactReducer;

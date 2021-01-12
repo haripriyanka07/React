@@ -4,7 +4,7 @@ export const initialState = {
     images :[]
 }
 
-const imageReducer = (state = initialState, action) => {
+export const imageReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_IMAGE :
             return {...state, images: [...state.images, action.data]};
@@ -21,4 +21,4 @@ const imageReducer = (state = initialState, action) => {
     }
 }
 
-export default imageReducer;
+// export default imageReducer;
