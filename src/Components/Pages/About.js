@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../molecule/Container";
+import { Container } from "../molecule/Container/Container";
 
 
 export function About() {
