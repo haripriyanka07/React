@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Home } from "./Components/Pages/Home";
 import { About } from "./Components/Pages/About";
-import { Contact } from "./Components/Pages/Contact";
+import Contact from "./Components/Pages/Contact";
 import Gallery from "./Components/Pages/Gallery";
 // import * as Reducer from './Components/atoms/reducer';
 import LoginButton from './Components/atoms/LoginButton';
@@ -15,7 +15,7 @@ import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from 'react-redux';
-import gallery from './Redux/gallery';
+import store from './Redux/rootReducer';
 // import { addAction, removeAction } from "./Redux/Image/imageActions";
 
 // export const imageContext = React.createContext()
@@ -23,9 +23,9 @@ import gallery from './Redux/gallery';
 function AppRouter() {
 
     // const [image, setImage] = useReducer(Reducer.reducer, Reducer.initialState)
-
+    
     return (
-        <Provider store={gallery}>
+        <Provider store={store}>
             <Router>
                 <div>
                     <div className="header">
