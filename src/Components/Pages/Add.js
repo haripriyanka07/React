@@ -57,7 +57,7 @@ function Add(props) {
 const mapStateToProps = states => {
     // console.log("states", states);
     return {
-        images: states.images
+        images: states.IR.images
         // addAction: (data) => state(addAction(data)),
         // removeAction: (data) => state(removeAction(data))
     }

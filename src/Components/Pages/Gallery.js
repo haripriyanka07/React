@@ -76,7 +76,7 @@ class Gallery extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        images: state.images
+        images: state.IR.images
     }
 }
 
