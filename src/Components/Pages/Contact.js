@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { addContact } from "../../Redux/Contact/ContactActions";
 import Heading from '../atoms/Heading';
 import Form from '../Organism/Form/Form';
+import '../molecule/Container/Container'
 
 function Contact(props){
 
@@ -34,8 +35,9 @@ function Contact(props){
     
     
     return (
+        
         isAuthenticated ? (
-        <div>
+        <div className='top'>
             <Heading value="Contact" />
             <Form onSubmit={handleOnSubmit} data={[{"label": "Name", "type":"Text", "details":"Enter Name", "value":name, "setValue": setName},
             {"label": "Email", "type":"Text", "details":"Your email", "value":email, "setValue": setEmail},
@@ -45,7 +47,7 @@ function Contact(props){
             
         </div>
         ):(
-            <div>
+            <div className='top'>
                 <Heading value="Please Login" />
             </div>
         )

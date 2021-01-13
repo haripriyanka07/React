@@ -5,6 +5,7 @@ import Heading from "../atoms/Heading";
 import Form from "../Organism/Form/Form";
 import { connect } from "react-redux";
 import { removeAction } from "../../Redux/Image/imageActions";
+import "../molecule/Container/Container.css";
 
 function Remove(props) {
 
@@ -22,14 +23,14 @@ function Remove(props) {
 
     return (
         isAuthenticated ? (
-        <div>
+        <div className="top">
             <Heading value="Remove Image" />
             <Form onSubmit={handleOnSubmit}
                 data={[{"label":"Name", "type":"Text", "details":"Enter the Name", "value":name, "setValue": setName}]} />
         </div>
         ) : 
         (
-            <div>
+            <div className="top">
                 <Heading value="Please Login" />
             </div>
         )

@@ -5,6 +5,7 @@ import Form from "../Organism/Form/Form";
 import { useAuth0 } from "@auth0/auth0-react";
 import { connect } from 'react-redux';
 import { addAction } from "../../Redux/Image/imageActions";
+import '../molecule/Container/Container.css'
 
 function Add(props) {
 
@@ -35,7 +36,7 @@ function Add(props) {
 
     return (
         isAuthenticated ? (
-        <div>
+        <div className="top">
             <Heading value="Add Image" />
             <Form onSubmit={handleOnSubmit} 
                     data= { [{"label":"URL", "type":"Text", "details":"Enter the URL", "value": url, "setValue": setUrl},
@@ -47,7 +48,7 @@ function Add(props) {
         </div>
         ) : 
         (
-            <div>
+            <div className="top">
                 <Heading value="Please Login" />
             </div>
         )

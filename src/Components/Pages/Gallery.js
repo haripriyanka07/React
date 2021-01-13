@@ -9,6 +9,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Heading from "../atoms/Heading";
 // import { addAction, removeAction } from '../../Redux/Image/imageActions';
 import { connect } from 'react-redux';
+import '../molecule/Container/Container.css'
 
 
 const Styles = theme => ({
@@ -42,7 +43,7 @@ class Gallery extends React.Component {
         const {classes} = this.props;
         // console.log(classes.root);
         return (
-            <div>
+            <div className='top'>
                 <Heading value="Gallery" />
             
                 <div className={classes.root}>
