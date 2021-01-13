@@ -10,8 +10,7 @@ export default function Form(props){
 
     let handleChange = (e) => {
         e.preventDefault();
-        console.log("CCCCs");
-        console.log(e.target);
+        
         props.onSubmit();
     }
 

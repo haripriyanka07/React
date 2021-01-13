@@ -36,10 +36,10 @@ function AppRouter() {
         <Provider store={store}>
             <Router>
                 <div>
-                    <AppBar color='white' style={{height:"10%"}}>
-                        <Toolbar style={{marginLeft:"20%", marginRight:"20%", height:"100%"}}>
+                    <AppBar color='transparent' style={{height:"10%"}}>
+                        <Toolbar style={{marginLeft:"15%", marginRight:"15%", height:"100%"}}>
                             <Avatar className={classes.avatar} alt="logo" src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/mkpmfymurbklrv3twgxh" />
-                            <Typography color="default" className={classes.title}>
+                            <Typography color="inherit" className={classes.title}>
                             Zemoso
                             </Typography>
                         

@@ -1,4 +1,4 @@
-import { ADD_CONTACT } from './ContactTypes'
+import { ADD_CONTACT } from './contactTypes'
 
 export const initialState = {
     contacts: []

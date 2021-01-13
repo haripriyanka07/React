@@ -1,4 +1,4 @@
-import { ADD_CONTACT } from "./ContactTypes";
+import { ADD_CONTACT } from "./contactTypes";
 import { toast } from "react-toastify";
 
 export function addContact(data) {

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render 1`] = `
+<DocumentFragment>
+  <h1
+    data-testid="h1tag"
+  >
+    cruze
+  </h1>
+</DocumentFragment>
+`;

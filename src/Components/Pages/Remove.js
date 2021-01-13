@@ -1,7 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState} from "react";
 // import { imageContext } from "../../AppRouter";
-import Heading from "../atoms/Heading";
+import Heading from "../atoms/Heading/Heading";
 import Form from "../Organism/Form/Form";
 import { connect } from "react-redux";
 import { removeAction } from "../../Redux/Image/imageActions";

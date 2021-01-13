@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 // import { imageContext } from "../../AppRouter";
-import Heading from "../atoms/Heading";
+import Heading from "../atoms/Heading/Heading";
 import Form from "../Organism/Form/Form";
 import { useAuth0 } from "@auth0/auth0-react";
 import { connect } from 'react-redux';
@@ -58,7 +58,7 @@ function Add(props) {
 const mapStateToProps = states => {
     // console.log("states", states);
     return {
-        images: states.IR.images
+        images: states.imageReducer.images
         // addAction: (data) => state(addAction(data)),
         // removeAction: (data) => state(removeAction(data))
     }

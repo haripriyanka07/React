@@ -2,7 +2,7 @@ import React from 'react';
 import AppRouter from './AppRouter';
 // import * as Reducer from './Components/atoms/reducer';
 import {render, fireEvent, cleanup, act, screen} from '@testing-library/react';
-import * as ContactReducer from "../src/Redux/Contact/ContactReducer";
+import * as ContactReducer from "./Redux/Contact/contactReducer";
 import * as ImageReducer from "../src/Redux/Image/imageReducer";
 import { mount, configure } from 'enzyme';
 import errorPage from "../src/Components/Pages/Error";
@@ -87,14 +87,11 @@ describe('Tests for App Router', () => {
                     render={({history, location}) => {
                         testHistory = history;
                         testLocation = location;
-                        return null;
+                        return "hari";
                     }}
                 />
             </MemoryRouter>
         );
-        act(() => {
-            
-        })
         expect(testLocation.pathname).toBe('/About');
     })
     // test('full app rendering/navigating', () => {

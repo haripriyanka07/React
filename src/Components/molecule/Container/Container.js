@@ -1,4 +1,4 @@
-import Heading from '../../atoms/Heading'
+import Heading from '../../atoms/Heading/Heading'
 import { Paragraph } from '../../atoms/Paragraph'
 import './Container.css'
 

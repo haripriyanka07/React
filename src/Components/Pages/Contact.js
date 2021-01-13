@@ -1,8 +1,8 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { addContact } from "../../Redux/Contact/ContactActions";
-import Heading from '../atoms/Heading';
+import { addContact } from "../../Redux/Contact/contactActions";
+import Heading from '../atoms/Heading/Heading';
 import Form from '../Organism/Form/Form';
 import '../molecule/Container/Container'
 
@@ -16,7 +16,6 @@ function Contact(props){
 
     const {isAuthenticated} = useAuth0();
 
-    console.log(props);
     function handleOnSubmit(e) {
         const data = {
             name,
@@ -56,7 +55,7 @@ function Contact(props){
 
 const mapStateToProps = states => {
     return {
-        contacts: states.CR.contacts
+        contacts: states.contactReducer.contacts
     }
 }
 const mapDispatchToProps = dispatch => {

@@ -6,7 +6,7 @@ import React from "react";
 import Img from "../atoms/Img/Img";
 import { withStyles } from '@material-ui/core/styles';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import Heading from "../atoms/Heading";
+import Heading from "../atoms/Heading/Heading";
 // import { addAction, removeAction } from '../../Redux/Image/imageActions';
 import { connect } from 'react-redux';
 import '../molecule/Container/Container.css'
@@ -39,9 +39,7 @@ const Styles = theme => ({
 class Gallery extends React.Component {
     
     render () {
-        console.log(this.props);
         const {classes} = this.props;
-        // console.log(classes.root);
         return (
             <div className='top'>
                 <Heading value="Gallery" />
@@ -77,7 +75,7 @@ class Gallery extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        images: state.IR.images
+        images: state.imageReducer.images
     }
 }
 
