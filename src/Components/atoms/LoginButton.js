@@ -8,7 +8,7 @@ const LoginButton = () => {
 
     return(
         !isAuthenticated && (
-        <Btn background="whitesmoke" color="black" type="btn" value="Login" onClick={() => loginWithRedirect()} />
+        <Btn background="#ef5343" color="white" type="btn" value="Login" onClick={() => loginWithRedirect()} />
         )
     )
 }

@@ -71,11 +71,7 @@ body {
   }
   
  
-  p{
-      padding: 20px;
-      background-color: aliceblue;
-      color: #000;
-  }
+ 
   
   .dropdown .dropbtn {
     font-size: 16px;  
@@ -128,7 +124,7 @@ body {
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -140,6 +136,9 @@ body {
     grid-gap: 10px;
     padding: 10px;
     justify-content: center;
+  }
+  .menu-right{
+    float: right;
   }
   
 
