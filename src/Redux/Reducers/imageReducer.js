@@ -1,10 +1,10 @@
-import { ADD_IMAGE, REMOVE_IMAGE} from './imageTypes'
+import { ADD_IMAGE, REMOVE_IMAGE} from '../Types/imageTypes'
 
 export const initialState = {
     images :[]
 }
 
-const imageReducer = (state = initialState, action) => {
+export const imageReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_IMAGE :
             return {...state, images: [...state.images, action.data]};
@@ -20,5 +20,3 @@ const imageReducer = (state = initialState, action) => {
             return state;
     }
 }
-
-export default imageReducer;

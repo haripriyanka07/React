@@ -1,4 +1,4 @@
-import { ADD_IMAGE, REMOVE_IMAGE } from './imageTypes';
+import { ADD_IMAGE, REMOVE_IMAGE } from '../Types/imageTypes';
 import { toast } from 'react-toastify';
 
 export function addAction(data) {

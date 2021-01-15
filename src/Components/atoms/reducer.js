@@ -12,7 +12,6 @@ export const reducer = (state = initialState, action) => {
             const y = z.filter((val) => {
                 return (val.name !== action.name)
             })
-            console.log(y);
             return {...state, images:y};
             
         default:

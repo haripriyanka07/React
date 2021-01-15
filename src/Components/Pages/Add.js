@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-// import { imageContext } from "../../AppRouter";
-import Heading from "../atoms/Heading";
+import Heading from "../atoms/Heading/Heading";
 import Form from "../Organism/Form/Form";
 import { useAuth0 } from "@auth0/auth0-react";
 import { connect } from 'react-redux';
-import { addAction } from "../../Redux/Image/imageActions";
+import { addAction } from "../../Redux/Actions/imageActions";
+import Container from "../molecule/Container/Container";
 
 function Add(props) {
 
@@ -13,12 +13,8 @@ function Add(props) {
     const [info, setInfo] = useState('');
     const [date, setDate] = useState('');
     const {isAuthenticated} = useAuth0();
-    // const { setImage } = useContext(imageContext)
-    
-    console.log(props);
 
     function handleOnSubmit(e) {
-        // setImage({type: 'add', data: {"name":name, "url":url, "info":info, "date":date}})
         const data = {
             name,
             url,
@@ -27,15 +23,12 @@ function Add(props) {
         }
         props.addAction(data);
         setName('');setDate('');setInfo('');setUrl('');
-        // setUrl = '';
-        // setInfo = '';
-        // setDate = '';
-
     }
 
     return (
-        isAuthenticated ? (
-        <div>
+        <Container>
+        {isAuthenticated ? (
+        <div style={{height: "90%", width:"50%", marginLeft:"auto", marginRight:"auto"}}>
             <Heading value="Add Image" />
             <Form onSubmit={handleOnSubmit} 
                     data= { [{"label":"URL", "type":"Text", "details":"Enter the URL", "value": url, "setValue": setUrl},
@@ -43,28 +36,24 @@ function Add(props) {
                         {"label":"Information", "type":"TextArea", "details":"Information", "value": info, "setValue": setInfo},
                         {"label":"Date", "type":"date", "value": date, "setValue": setDate}] }
                     /> 
-            
         </div>
         ) : 
         (
-            <div>
+            <div className="top">
                 <Heading value="Please Login" />
             </div>
-        )
+        )}
+        </Container>
     )
 }
 
 const mapStateToProps = states => {
-    // console.log("states", states);
     return {
-        images: states.IR.images
-        // addAction: (data) => state(addAction(data)),
-        // removeAction: (data) => state(removeAction(data))
+        images: states.imageReducer.images
     }
 }
 
 const mapDispatchToProps = dispatch => {
-    // console.log("dispatch", test)
     return {
         addAction: (data) => dispatch(addAction(data))
     }

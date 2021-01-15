@@ -1,17 +1,13 @@
 import Btn from '../../atoms/Button/Button';
-import Input from '../../atoms/Input';
+import Input from '../../atoms/Input/Input';
 import Label from '../../atoms/Label';
 import TextArea from '../../atoms/TextArea';
-import './index.css'
-// import Button from 'react-bootstrap/Button'
+import './Form.css'
 
-export default function Form(props){
-
-
+const Form = (props) => {
     let handleChange = (e) => {
         e.preventDefault();
-        console.log("CCCCs");
-        console.log(e.target);
+        
         props.onSubmit();
     }
 
@@ -29,3 +25,4 @@ export default function Form(props){
         </form>
     );
 }
+export default Form;
