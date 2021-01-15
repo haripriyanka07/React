@@ -1,6 +1,9 @@
-export default function Heading(props) {
+import { Typography } from "@material-ui/core";
+
+const Heading = (props) => {
     return (
-        <h1 data-testid="h1tag" style={props.style}>{props.value}</h1>
+        <Typography align='center' data-testid="h1tag" variant='h4'>{props.value}</Typography>
     )
 }
+export default Heading;
 

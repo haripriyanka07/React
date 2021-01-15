@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import './Link.css';
 
-export default function link(props) {
-    // console.log(props);
+const link = (props) => {
     return (
-        <Link style={{ textDecoration: 'none', padding:10, color: 'black'}} to={props.to}>{props.children}</Link>
+        <Link className="link" to={props.to}>{props.children}</Link>
     )
 }
+export default link;

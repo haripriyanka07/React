@@ -2,10 +2,11 @@
 
 exports[`render 1`] = `
 <DocumentFragment>
-  <h1
+  <h4
+    class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
     data-testid="h1tag"
   >
     cruze
-  </h1>
+  </h4>
 </DocumentFragment>
 `;

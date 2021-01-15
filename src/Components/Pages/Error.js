@@ -1,7 +1,11 @@
 import Heading from "../atoms/Heading/Heading";
+import Container from "../molecule/Container/Container";
 
-export default function errorPage() {
+const errorPage = () => {
     return(
-        <Heading value="Error404" />
+        <Container>
+            <Heading value="Error404" />
+        </Container>
     )
 }
+export default errorPage;

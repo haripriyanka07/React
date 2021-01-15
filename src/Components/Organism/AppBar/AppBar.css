@@ -1,0 +1,19 @@
+.rightToolbar {
+    margin-left: auto;
+  }
+.avatar {
+    padding: 20px;
+}
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+.top {
+    margin-left:15%;
+    margin-right:15%;
+    height: 100%;
+}
+.appBar {
+    height: 10%;
+}

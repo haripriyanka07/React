@@ -1,38 +1,11 @@
 import React from 'react';
-import AppRouter from './AppRouter';
-// import * as Reducer from './Components/atoms/reducer';
-import {render, fireEvent, cleanup, act, screen} from '@testing-library/react';
-import * as ContactReducer from "./Redux/Contact/contactReducer";
-import * as ImageReducer from "../src/Redux/Image/imageReducer";
-import { mount, configure } from 'enzyme';
-import errorPage from "../src/Components/Pages/Error";
-import {Home} from "../src/Components/Pages/Home";
-import {About} from "../src/Components/Pages/About";
-import Contact from "../src/Components/Pages/Contact";
-import Gallery from "../src/Components/Pages/Gallery";
-import Add from "../src/Components/Pages/Add";
-import Remove from "../src/Components/Pages/Remove";
+import App from './App';
+import {render, cleanup} from '@testing-library/react';
+import * as ContactReducer from "../src/Redux/Reducers/contactReducer";
+import * as ImageReducer from "../src/Redux/Reducers/imageReducer";
 import { MemoryRouter } from 'react-router';
-import Adapter from 'enzyme-adapter-react-16';
 import {createMemoryHistory} from 'history';
 import { Router, Route } from "react-router";
-import { BrowserRouter } from "react-router-dom";
-
-// jest.mock('../src/Components/Pages/Error');
-// jest.mock('../src/Components/Pages/Home');
-// jest.mock('../src/Components/Pages/Contact');
-// jest.mock('../src/Components/Pages/About');
-// jest.mock('../src/Components/Pages/Gallery');
-// jest.mock('../src/Components/Pages/Add');
-// jest.mock('../src/Components/Pages/Remove');
-
-// jest.mock('firebase/app');
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-    window.history.pushState({}, 'Test page', route)
-  
-    return render(ui, { wrapper: BrowserRouter })
-  }
-
 
 afterEach(cleanup)
 
@@ -56,7 +29,7 @@ describe('test the image reducer and actions', () => {
 })
 
 describe('Test the contact reducer and actions', () => {
-    
+
     it('should return the intial state', () => {
         expect(ContactReducer.initialState).toEqual({ contacts: [] })
     })
@@ -67,11 +40,12 @@ describe('Test the contact reducer and actions', () => {
 })
 
 describe('Tests for App Router', () => {
+
     test("home page", () => {
         const history = createMemoryHistory();
         render(
             <Router history={history}>
-                <AppRouter />
+                <App />
             </Router>
         );
         expect(history.location.pathname).toBe("/");
@@ -81,26 +55,17 @@ describe('Tests for App Router', () => {
         let testHistory, testLocation;
         render(
             <MemoryRouter initialEntries={["/About"]}>
-                <AppRouter />
+                <App />
                 <Route 
                     path='*'
                     render={({history, location}) => {
                         testHistory = history;
                         testLocation = location;
-                        return "hari";
+                        return null;
                     }}
                 />
             </MemoryRouter>
         );
         expect(testLocation.pathname).toBe('/About');
     })
-    // test('full app rendering/navigating', () => {
-    //     renderWithRouter(<AppRouter />)
-    //     expect(screen.getByText(/Home/i)).toBeInTheDocument()
-      
-    //     const leftClick = { button: 0 }
-    //     userEvent.click(screen.getByText(/about/i), leftClick)
-      
-    //     expect(screen.getByText(/About/i)).toBeInTheDocument()
-    //   })
 })

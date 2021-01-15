@@ -1,4 +1,4 @@
-import { ADD_IMAGE, REMOVE_IMAGE} from './imageTypes'
+import { ADD_IMAGE, REMOVE_IMAGE} from '../Types/imageTypes'
 
 export const initialState = {
     images :[]
@@ -20,5 +20,3 @@ export const imageReducer = (state = initialState, action) => {
             return state;
     }
 }
-
-// export default imageReducer;

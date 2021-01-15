@@ -1,4 +1,4 @@
-import { ADD_CONTACT } from './contactTypes'
+import { ADD_CONTACT } from '../Types/contactTypes'
 
 export const initialState = {
     contacts: []
@@ -12,4 +12,3 @@ export const contactReducer = (state = initialState, action) => {
             return state;
     }
 }
-// export default contactReducer;

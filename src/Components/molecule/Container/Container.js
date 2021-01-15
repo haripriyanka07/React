@@ -1,12 +1,13 @@
-import Heading from '../../atoms/Heading/Heading'
-import { Paragraph } from '../../atoms/Paragraph'
-import './Container.css'
+import { Grid } from '@material-ui/core'
+import "./Container.css"
 
-export function Container(props) {
+const Container = (props) => {
     return (
-        <div className="top">
-            <Heading value={props.heading} style={props.hstyle}/>
-            <Paragraph value={props.paragraph} />
+        <div >
+            <Grid container spacing={0} direction="column" alignItems="center" justify="center" className="root">
+                    {props.children}
+            </Grid>
         </div>
     )
 }
+export default Container;
