@@ -1,6 +1,6 @@
 const Label = (props) => {
     return (
-        <label>{props.value}</label>
+        <label>{props.children}</label>
     );
 }
 export default Label;

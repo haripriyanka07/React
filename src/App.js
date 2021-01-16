@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router} from "react-router-dom";
-import './index.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from 'react-redux';

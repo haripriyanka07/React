@@ -6,7 +6,7 @@ exports[`render 1`] = `
     class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
     data-testid="h1tag"
   >
-    cruze
+    Heading
   </h4>
 </DocumentFragment>
 `;

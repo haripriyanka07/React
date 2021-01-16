@@ -39,16 +39,16 @@ function Contact(props){
         <Container>
             {isAuthenticated ? (
             <div>
-                <Heading value="Contact" />
-                <Form onSubmit={handleOnSubmit} data={[{"label": "Name", "type":"Text", "details":"Enter Name", "value":name, "setValue": setName},
-                {"label": "Email", "type":"Text", "details":"Your email", "value":email, "setValue": setEmail},
-                {"label": "Phone Number", "type":"Number", "details":"Your Phone Number", "value": phoneNumber, "setValue": setPhoneNumber},
-                {"label": "Address", "type":"Text", "details":"Enter your Address", "value": address, "setValue": setAddress},
-                {"label": "Comments", "type":"TextArea", "details":"Enter your comments", "value": comments, "setValue": setComments}]} />
+                <Heading>Contact</Heading>
+                <Form onSubmit={handleOnSubmit} data={[{"label": "Name", "type":"Text", "placeholders":"Enter Name", "value":name, "setValue": setName},
+                {"label": "Email", "type":"Text", "placeholders":"Your email", "value":email, "setValue": setEmail},
+                {"label": "Phone Number", "type":"Number", "placeholders":"Your Phone Number", "value": phoneNumber, "setValue": setPhoneNumber},
+                {"label": "Address", "type":"Text", "placeholders":"Enter your Address", "value": address, "setValue": setAddress},
+                {"label": "Comments", "type":"TextArea", "placeholders":"Enter your comments", "value": comments, "setValue": setComments}]} />
             </div>
             ):(
                 <div>
-                    <Heading value="Please Login" />
+                    <Heading>Please Login</Heading>
                 </div>
             )}
         </Container>

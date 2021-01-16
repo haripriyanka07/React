@@ -4,7 +4,7 @@ import Container from "../molecule/Container/Container";
 const errorPage = () => {
     return(
         <Container>
-            <Heading value="Error404" />
+            <Heading>Error404</Heading>
         </Container>
     )
 }

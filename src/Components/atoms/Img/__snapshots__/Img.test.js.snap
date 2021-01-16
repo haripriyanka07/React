@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the img 1`] = `
+<img
+  alt="hari img"
+  src="hari"
+/>
+`;

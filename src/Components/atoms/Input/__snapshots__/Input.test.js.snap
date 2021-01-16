@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the input 1`] = `
+<input
+  onChange={[Function]}
+  placeholder="Enter..."
+  type="text"
+  value="New Text Input"
+/>
+`;

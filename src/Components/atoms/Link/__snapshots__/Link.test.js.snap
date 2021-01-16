@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the input 1`] = `
+<a
+  className="link"
+  href="/linkstate"
+  onClick={[Function]}
+>
+  newLink
+</a>
+`;

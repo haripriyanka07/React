@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the TextArea 1`] = `
+<div>
+  <textarea
+    onChange={[Function]}
+    value="this is textarea testing"
+  />
+</div>
+`;

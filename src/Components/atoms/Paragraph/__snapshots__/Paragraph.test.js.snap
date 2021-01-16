@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the paragraph 1`] = `
+<p
+  className="MuiTypography-root paragraph MuiTypography-body1 MuiTypography-paragraph MuiTypography-alignCenter"
+>
+  This is paragraph testing
+</p>
+`;

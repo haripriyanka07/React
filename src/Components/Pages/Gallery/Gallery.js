@@ -12,7 +12,7 @@ class Gallery extends React.Component {
     render() {
         return (
             <Container>
-                <Heading value="Gallery" />
+                <Heading>Gallery</Heading>
                 <div className="section">
                     <GridList cellHeight={200} spacing={1} className="gridList">
                         {this.props.images.map((tile) => (

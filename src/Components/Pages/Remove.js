@@ -19,14 +19,14 @@ function Remove(props) {
         <Container>
         {isAuthenticated ? (
             <div style={{height: "90%", width:"50%", marginLeft:"auto", marginRight:"auto"}}>
-                <Heading value="Remove Image" />
+                <Heading>Remove Image</Heading>
                 <Form onSubmit={handleOnSubmit}
-                    data={[{ "label": "Name", "type": "Text", "details": "Enter the Name", "value": name, "setValue": setName }]} />
+                    data={[{ "label": "Name", "type": "Text", "placeholder": "Enter the Name", "value": name, "setValue": setName }]} />
             </div>
         ) :
             (
                 <div>
-                    <Heading value="Please Login" />
+                    <Heading>Please Login</Heading>
                 </div>
             )}
         </Container>

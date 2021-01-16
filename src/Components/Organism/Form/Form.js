@@ -1,7 +1,7 @@
 import Btn from '../../atoms/Button/Button';
 import Input from '../../atoms/Input/Input';
-import Label from '../../atoms/Label';
-import TextArea from '../../atoms/TextArea';
+import Label from '../../atoms/Label/Label';
+import TextArea from '../../atoms/TextArea/TextArea';
 import './Form.css'
 
 const Form = (props) => {
@@ -15,9 +15,9 @@ const Form = (props) => {
         <form id="newform" className="form" onSubmit={handleChange}>
             {props.data.map(val => 
                 <div key={val.label}>
-                    <Label value={val.label}/>
+                    <Label>{val.label}</Label>
                     {
-                        val.type === "TextArea" ? (<TextArea type={val.type} details={val.details} onChange={val.setValue} value={val.value} />) : (<Input type={val.type} details={val.details} onChange={val.setValue} value={val.value} />)
+                        val.type === "TextArea" ? (<TextArea type={val.type} placeholder={val.placeholder} onChange={val.setValue} value={val.value} />) : (<Input type={val.type} placeholder={val.placeholder} onChange={val.setValue} value={val.value} />)
                     }
                 </div>
             )}

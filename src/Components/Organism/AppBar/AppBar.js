@@ -6,6 +6,7 @@ import { AccountCircle } from "@material-ui/icons";
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import "./AppBar.css";
+import Heading from '../../atoms/Heading/Heading';
 
 function Appbar() {
     const {loginWithRedirect, logout, isAuthenticated} = useAuth0();
@@ -20,9 +21,7 @@ function Appbar() {
         <AppBar position="fixed"  color='transparent' className="appBar">
             <Toolbar className="top" >
                 <Avatar className="avatar" alt="logo" src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/mkpmfymurbklrv3twgxh" />
-                <Typography color="inherit" className="title">
-                Zemoso
-                </Typography>
+                <Heading value="Zemoso" />
                 <section className= "rightToolbar">
                     <Link to='/'>Home</Link>
                     <Link to='/about'>About</Link>

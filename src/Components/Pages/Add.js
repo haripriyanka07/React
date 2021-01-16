@@ -29,18 +29,18 @@ function Add(props) {
         <Container>
         {isAuthenticated ? (
         <div style={{height: "90%", width:"50%", marginLeft:"auto", marginRight:"auto"}}>
-            <Heading value="Add Image" />
+            <Heading>Add Image</Heading>
             <Form onSubmit={handleOnSubmit} 
-                    data= { [{"label":"URL", "type":"Text", "details":"Enter the URL", "value": url, "setValue": setUrl},
-                        {"label":"Name", "type":"Text", "details":"Enter the name", "value":name, "setValue": setName},
-                        {"label":"Information", "type":"TextArea", "details":"Information", "value": info, "setValue": setInfo},
+                    data= { [{"label":"URL", "type":"Text", "placeholder":"Enter the URL", "value": url, "setValue": setUrl},
+                        {"label":"Name", "type":"Text", "placeholder":"Enter the name", "value":name, "setValue": setName},
+                        {"label":"Information", "type":"TextArea", "placeholder":"Information", "value": info, "setValue": setInfo},
                         {"label":"Date", "type":"date", "value": date, "setValue": setDate}] }
                     /> 
         </div>
         ) : 
         (
             <div className="top">
-                <Heading value="Please Login" />
+                <Heading>Please Login</Heading>
             </div>
         )}
         </Container>
